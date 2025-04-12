@@ -1,0 +1,7 @@
+do {
+    code
+} while {condition is true}
+
+do {
+    code
+} until {condition is false}

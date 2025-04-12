@@ -1,0 +1,3 @@
+FOR (Iterator value; Condition to run until it's true; Increment iterator) {
+    code
+}

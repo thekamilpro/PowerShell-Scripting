@@ -1,0 +1,2 @@
+"Geralt", "Yennefer", "Triss" | #PowerShel converts these comma separated strings into the array
+    ForEach-Object -Begin {Write-Host "Start"} -Process {Write-Host "Welcome: $_"} -End {Write-Host "STOP"}
