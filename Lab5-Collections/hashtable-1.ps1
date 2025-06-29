@@ -14,6 +14,8 @@ $hash
 $hash.email = "kamil@kamilpro.com"
 $hash
 
+$hash.Add("handle", "@kamilpro")
+
 # Creating a hashtable with some data
 $h1 = @{
     name = "Bob"
