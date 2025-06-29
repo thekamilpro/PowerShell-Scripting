@@ -5,12 +5,12 @@ function New-FileTree {
     )
     
     $start = Get-ChildItem -Path $Path
-    $tree = @{ files = [System.Collections.Generic.List[string]]::new() }
+    $tree = [pscustomobject]@{ files = [System.Collections.Generic.List[string]]::new() }
 
     foreach ($i in $start) {
 
         if ($i.GetType().Name -eq "DirectoryInfo") {
-            $tree[$i.Name] = processfiles -Path $i.FullName
+            $tree | Add-Member -MemberType NoteProperty -Name $i.Name -Value (New-FileTree -Path $i.FullName)
         }
 
         if ($i.GetType().Name -eq "FileInfo") {
