@@ -1,12 +1,12 @@
-#Create a hashtable
+#Create a pscustombject
 $pso = [PSCustomObject]::new()
 
-# Adding keys to a hashtable
+# Adding properties to a pscustombject
 $pso | Add-Member -MemberType NoteProperty -Name "Name" -Value "Kamil"
 $pso | Add-Member -MemberType NoteProperty -Name "Website" -Value "kamilpro.com"
 $pso | Add-Member -MemberType NoteProperty -Name "Email" -Value "kamil@kamilpro.com"
 
-#Notice a difference from a Hashtable: In hashtable we had "Keys" and "Values", here we've got proper fields
+#Notice a difference from a Hashtable: In hashtable we had "Keys" and "Values", here we've got properties
 $pso 
 
 $pso | Get-Member
