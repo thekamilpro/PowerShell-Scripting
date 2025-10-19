@@ -10,7 +10,3 @@ finally {
     Write-Host "Closing Database Connection"
     Write-Host "Exit"
 }
-
-
-
-catch [System.Management.Automation.CommandNotFoundException]
