@@ -4,5 +4,5 @@ $ErrorActionPreference
 $ErrorActionPreference = 'Stop'
 $ErrorActionPreference
 
-#Side note, there a few other preferences you can configure this way:
+#Side note, there are a few other preferences you can configure this way:
 Get-Variable -Name *Preference
