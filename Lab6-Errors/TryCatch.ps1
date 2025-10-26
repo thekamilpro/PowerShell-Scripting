@@ -1,5 +1,6 @@
 $ErrorActionPreference = 'Continue'
 Get-Item -Path "here.txt"
+Write-Host "I'm here"
 # You need terminate code to for catch to engage
 try {
     Get-Item -Path "here.txt"
