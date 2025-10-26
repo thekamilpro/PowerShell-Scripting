@@ -7,7 +7,7 @@ function Test-PwshLatest {
     )
 
     $current = $PSVersionTable.PSVersion
-    Write-Host "Current: $current"
+    Write-Verbose "Current: $current"
     $url = $Fail ? "https://endoflife.date/api/v2" :  "https://endoflife.date/api/v1/products/powershell/releases/latest"
     try {
         $response = Invoke-RestMethod -Uri $url
@@ -21,7 +21,7 @@ function Test-PwshLatest {
         $_
     }
     $latest = $response.result.latest.name
-    Write-Host "Latest: $latest"
+    Write-Verbose "Latest: $latest"
     if ($current -lt $latest) {
         return $false
     }
