@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 try {
     Get-Item -Path "here.txt"
-    #Get-Item -Path "$PSScriptRoot/TryCatch.ps1"
+    #Get-ItemAAA -Path "here.txt"
 }
 catch [System.Management.Automation.CommandNotFoundException] {
     Write-Warning "Unknown command"
@@ -20,6 +20,5 @@ finally {
 
 #To find Error type on PowerShell 7:
 Get-Error
-(Get-Error).Exception.Type
 #On Windows PowerShell 5.1
 $error[0].exception.GetType().FullName
